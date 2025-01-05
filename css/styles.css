@@ -1,69 +1,234 @@
-/* Importar los otros archivos CSS */
-@import url('reset.css');
-@import url('variables.css');
-
-/* Definir las fuentes */
+/* Fonts */
 @font-face {
-    font-family: 'Outfit';
-    src: url('../assets/fonts/outfit/static/Outfit-Black.ttf') format('truetype');
-    font-weight: 900;
+  font-family: 'Outfit';
+  src: url('../assets/fonts/outfit/static/Outfit-Black.ttf') format('truetype');
+  font-weight: 900;
 }
 
 @font-face {
-    font-family: 'Outfit';
-    src: url('../assets/fonts/outfit/static/Outfit-Bold.ttf') format('truetype');
-    font-weight: 700;
+  font-family: 'Outfit';
+  src: url('../assets/fonts/outfit/static/Outfit-Bold.ttf') format('truetype');
+  font-weight: 700;
 }
 
 @font-face {
-    font-family: 'Outfit';
-    src: url('../assets/fonts/outfit/static/Outfit-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
+  font-family: 'Outfit';
+  src: url('../assets/fonts/outfit/static/Outfit-ExtraBold.ttf')
+    format('truetype');
+  font-weight: 800;
 }
 
 @font-face {
-    font-family: 'Outfit';
-    src: url('../assets/fonts/outfit/static/Outfit-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
+  font-family: 'Outfit';
+  src: url('../assets/fonts/outfit/static/Outfit-ExtraLight.ttf')
+    format('truetype');
+  font-weight: 200;
 }
 
 @font-face {
-    font-family: 'Outfit';
-    src: url('../assets/fonts/outfit/static/Outfit-Light.ttf') format('truetype');
-    font-weight: 300;
+  font-family: 'Outfit';
+  src: url('../assets/fonts/outfit/static/Outfit-Light.ttf') format('truetype');
+  font-weight: 300;
 }
 
 @font-face {
-    font-family: 'Outfit';
-    src: url('../assets/fonts/outfit/static/Outfit-Medium.ttf') format('truetype');
-    font-weight: 500;
+  font-family: 'Outfit';
+  src: url('../assets/fonts/outfit/static/Outfit-Medium.ttf') format('truetype');
+  font-weight: 500;
 }
 
 @font-face {
-    font-family: 'Outfit';
-    src: url('../assets/fonts/outfit/static/Outfit-Regular.ttf') format('truetype');
-    font-weight: normal;
+  font-family: 'Outfit';
+  src: url('../assets/fonts/outfit/static/Outfit-Regular.ttf')
+    format('truetype');
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Outfit';
-    src: url('../assets/fonts/outfit/static/Outfit-SemiBold.ttf') format('truetype');
-    font-weight: 600;
+  font-family: 'Outfit';
+  src: url('../assets/fonts/outfit/static/Outfit-SemiBold.ttf')
+    format('truetype');
+  font-weight: 600;
 }
 
 @font-face {
-    font-family: 'Outfit';
-    src: url('../assets/fonts/outfit/static/Outfit-Thin.ttf') format('truetype');
-    font-weight: 100;
+  font-family: 'Outfit';
+  src: url('../assets/fonts/outfit/static/Outfit-Thin.ttf') format('truetype');
+  font-weight: 100;
 }
 
 @font-face {
-    font-family: 'Young Serif';
-    src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
-    font-weight: normal;
+  font-family: 'Young Serif';
+  src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf')
+    format('truetype');
+  font-weight: normal;
 }
 
-/* Aplicar las fuentes a los elementos HTML */
 body {
-    font-family: 'Outfit', sans-serif;
+  font-family: var(--font-family);
+  background-color: var(--background);
+  color: var(--text-tertiary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-serif);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--hr);
+}
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+.recipe__content {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-500);
+  width: 100%;
+  max-width: 46rem;
+  margin-block: clamp(0, 5vw, var(--spacing-1000));
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius-400);
+}
+
+.recipe__header {
+  padding: var(--spacing-700);
+}
+
+.recipe__image {
+  border-radius: var(--border-radius-400);
+}
+
+.recipe__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  margin-inline: clamp(var(--spacing-500), 5vw, var(--spacing-700));
+}
+
+.recipe__content h1 {
+  font: var(--text-preset-1);
+  color: var(--text-primary);
+}
+
+.recipe__content h2 {
+  font: var(--text-preset-2);
+  color: var(--text-secondary);
+}
+
+.recipe__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  padding: clamp(var(--spacing-500), 5vw, var(--spacing-700));
+}
+
+.recipe__section-title {
+  font: var(--text-preset-3);
+  color: var(--text-secondary);
+}
+
+.recipe__section li {
+  padding-block: var(--spacing-50);
+  padding-inline-start: var(--spacing-300);
+  list-style-position: outside;
+  margin-inline-start: var(--spacing-400);
+}
+
+.recipe__section li::marker {
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.recipe__section-content li::marker {
+  color: var(--text-quaternary);
+  font-size: 0.8rem;
+}
+
+.recipe__ingredients-list li::marker {
+  font-size: 0.8rem;
+}
+
+.recipe__section--preparation-time {
+  background-color: var(--background-secondary);
+  padding: var(--spacing-400);
+  border-radius: var(--border-radius-200);
+  margin-inline: clamp(var(--spacing-500), 5vw, var(--spacing-700));
+}
+
+.recipe__section--preparation-time .recipe__section-title {
+  font: var(--text-preset-3);
+  color: var(--text-quaternary);
+}
+
+.recipe__section--preparation-time strong {
+  color: var(--text-tertiary);
+}
+
+.recipe__nutrition-table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: var(--spacing-200);
+  border-bottom: 1px solid var(--hr);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+td > strong {
+  color: var(--text-secondary);
+}
+
+.footer {
+  text-align: center;
+  padding-block: var(--spacing-200);
+}
+
+/* Footer Links */
+footer a {
+  color: var(--footer-link-color);
+  text-decoration: none;
+  transition: color var(--transition-default);
+}
+
+footer a:hover,
+footer a:active {
+  color: var(--footer-link-color-hover);
+}
+
+footer a:focus-visible {
+  outline: 2px solid var(--footer-link-color);
+  outline-offset: 2px;
+}
+
+@media (max-width: 375px) {
+  .recipe__content {
+    border-radius: 0;
+  }
+  .recipe__header {
+    padding: 0;
+  }
+
+  .recipe__image {
+    border-radius: 0;
+  };
 }

@@ -14,13 +14,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/* dark mode user-agent-styles */
-/* improves punctuation in supported browsers */
-html {
-  /* color-scheme: dark light; */
-  hanging-punctuation: first last;
-}
-
 /* min body height */
 body {
   min-height: 100svh;
@@ -69,5 +62,4 @@ p,
 li,
 figcaption {
   max-width: 65ch;
-  text-wrap: pretty;
 }
