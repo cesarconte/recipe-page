@@ -5,6 +5,12 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple and quick recipe for a classic omelette." />
+    <meta
+      name="author"
+      content="César Conte" />
 
     <link
       rel="icon"
@@ -27,16 +33,22 @@
 
   <body>
     <main>
-      <article class="recipe__content">
-        <header class="recipe__header">
+      <article
+        class="recipe__content"
+        aria-labelledby="recipe-title">
+        <div class="recipe__image-container">
           <img
             src="./assets/images/image-omelette.jpeg"
-            alt="Frontend Mentor logo"
+            alt="A golden brown omelette served on a white plate"
             class="recipe__image" />
-        </header>
+        </div>
 
         <div class="recipe__info">
-          <h1 class="recipe__title">Simple Omelette Recipe</h1>
+          <h1
+            id="recipe-title"
+            class="recipe__title">
+            Simple Omelette Recipe
+          </h1>
           <p class="recipe__description">
             An easy and quick dish, perfect for any meal. This classic omelette
             combines beaten eggs cooked to perfection, optionally filled with
@@ -53,9 +65,14 @@
             Preparation time
           </h2>
           <ul class="recipe__section-content">
-            <li><strong>Total: </strong> Approximately 10 minutes</li>
-            <li><strong>Preparation: </strong> 5 minutes</li>
-            <li><strong>Cooking: </strong> 5 minutes</li>
+            <li>
+              <span class="recipe__time-label">Total:</span> Approximately 10
+              minutes
+            </li>
+            <li>
+              <span class="recipe__time-label">Preparation:</span> 5 minutes
+            </li>
+            <li><span class="recipe__time-label">Cooking:</span> 5 minutes</li>
           </ul>
         </section>
 
@@ -90,30 +107,48 @@
           </h2>
           <ol class="recipe__instructions-list">
             <li class="recipe__instructions-item">
-              <strong>Beat the eggs: </strong>In a bowl, beat the eggs with a pinch of salt and
-              pepper until they are well mixed. You can add a tablespoon of
-              water or milk for a fluffier texture.
+              <p>
+                <span>Beat the eggs: </span>
+                In a bowl, beat the eggs with a pinch of salt and pepper until
+                they are well mixed. You can add a tablespoon of water or milk
+                for a fluffier texture.
+              </p>
             </li>
             <li class="recipe__instructions-item">
-              <strong>Heat the pan: </strong>Place a non-stick frying pan over medium heat and
-              add butter or oil.
+              <p>
+                <span>Heat the pan: </span>
+                Place a non-stick frying pan over medium heat and add butter or
+                oil.
+              </p>
             </li>
             <li class="recipe__instructions-item">
-              <strong>Cook the omelette: </strong>Once the butter is melted and bubbling, pour in
-              the eggs. Tilt the pan to ensure the eggs evenly coat the surface.
+              <p>
+                <span>Cook the omelette: </span>
+                Once the butter is melted and bubbling, pour in the eggs. Tilt
+                the pan to ensure the eggs evenly coat the surface.
+              </p>
             </li>
             <li class="recipe__instructions-item">
-              <strong>Add fillings (optional): </strong>When the eggs begin to set at the edges
-              but are still slightly runny in the middle, sprinkle your chosen
-              fillings over one half of the omelette.
+              <p>
+                <span>Add fillings (optional): </span>
+                When the eggs begin to set at the edges but are still slightly
+                runny in the middle, sprinkle your chosen fillings over one half
+                of the omelette.
+              </p>
             </li>
             <li class="recipe__instructions-item">
-              <strong>Fold and serve: </strong>As the omelette continues to cook, carefully lift
-              one edge and fold it over the fillings. Let it cook for another
-              minute, then slide it onto a plate.
+              <p>
+                <span>Fold and serve: </span>
+                As the omelette continues to cook, carefully lift one edge and
+                fold it over the fillings. Let it cook for another minute, then
+                slide it onto a plate.
+              </p>
             </li>
             <li class="recipe__instructions-item">
-              <strong>Enjoy: </strong>Serve hot, with additional salt and pepper if needed.
+              <p>
+                <span>Enjoy: </span>
+                Serve hot, with additional salt and pepper if needed.
+              </p>
             </li>
           </ol>
         </section>
@@ -134,19 +169,27 @@
             <tbody>
               <tr>
                 <td>Calories</td>
-                <td><strong>277kcal</strong></td>
+                <td>
+                  <span>277<abbr title="kilocalories">kcal</abbr></span>
+                </td>
               </tr>
               <tr>
                 <td>Carbs</td>
-                <td><strong>0g</strong></td>
+                <td>
+                  <span>0<abbr title="grams">g</abbr></span>
+                </td>
               </tr>
               <tr>
                 <td>Protein</td>
-                <td><strong>20g</strong></td>
-                <tr>
-                <td>Fat</td>
-                <td><strong>22g</strong></td>
+                <td>
+                  <span>20<abbr title="grams">g</abbr></span>
+                </td>
               </tr>
+              <tr>
+                <td>Fat</td>
+                <td>
+                  <span>22<abbr title="grams">g</abbr></span>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -167,7 +210,8 @@
         <a
           href="#"
           class="footer__link"
-          t
+          target="_blank"
+          rel="noopener noreferrer"
           >César Conte</a
         >.
       </div>

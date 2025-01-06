@@ -1,67 +1,9 @@
 /* Fonts */
-@font-face {
+ @font-face {
   font-family: 'Outfit';
-  src: url('../assets/fonts/outfit/static/Outfit-Black.ttf') format('truetype');
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: 'Outfit';
-  src: url('../assets/fonts/outfit/static/Outfit-Bold.ttf') format('truetype');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Outfit';
-  src: url('../assets/fonts/outfit/static/Outfit-ExtraBold.ttf')
-    format('truetype');
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: 'Outfit';
-  src: url('../assets/fonts/outfit/static/Outfit-ExtraLight.ttf')
-    format('truetype');
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: 'Outfit';
-  src: url('../assets/fonts/outfit/static/Outfit-Light.ttf') format('truetype');
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: 'Outfit';
-  src: url('../assets/fonts/outfit/static/Outfit-Medium.ttf') format('truetype');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Outfit';
-  src: url('../assets/fonts/outfit/static/Outfit-Regular.ttf')
-    format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Outfit';
-  src: url('../assets/fonts/outfit/static/Outfit-SemiBold.ttf')
-    format('truetype');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Outfit';
-  src: url('../assets/fonts/outfit/static/Outfit-Thin.ttf') format('truetype');
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: 'Young Serif';
-  src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf')
-    format('truetype');
-  font-weight: normal;
+  src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf')
+    format('truetype-variations');
+  font-weight: 100 900;
 }
 
 body {
@@ -90,8 +32,9 @@ hr {
   border: none;
   height: 1px;
   background-color: var(--hr);
+  margin-inline: clamp(var(--spacing-500), 5vw, var(--spacing-700));
 }
-strong {
+span {
   font-weight: var(--font-weight-bold);
 }
 
@@ -102,13 +45,12 @@ strong {
   gap: var(--spacing-500);
   width: 100%;
   max-width: 46rem;
-  margin-block: clamp(0, 5vw, var(--spacing-1000));
   box-shadow: var(--shadow);
   border-radius: var(--border-radius-400);
 }
 
-.recipe__header {
-  padding: var(--spacing-700);
+.recipe__image-container {
+    padding: var(--spacing-700);
 }
 
 .recipe__image {
@@ -201,12 +143,12 @@ td > strong {
 .footer {
   text-align: center;
   padding-block: var(--spacing-200);
-}
+  font: var(--text-preset-5);
+} 
 
-/* Footer Links */
-footer a {
+ footer a {
   color: var(--footer-link-color);
-  text-decoration: none;
+  text-underline-offset: .25rem;
   transition: color var(--transition-default);
 }
 
@@ -220,7 +162,8 @@ footer a:focus-visible {
   outline-offset: 2px;
 }
 
-@media (max-width: 375px) {
+/* Media Queries */
+@media screen and (max-width: 375px) {
   .recipe__content {
     border-radius: 0;
   }
@@ -231,4 +174,47 @@ footer a:focus-visible {
   .recipe__image {
     border-radius: 0;
   };
+}
+
+@media (min-width: 376px) {
+  .recipe__content {
+    margin-block: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .recipe__content {
+    margin-block: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .recipe__content {
+    margin-block: 3.875rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .recipe__content {
+    margin-block: 7.75rem;
+  }
+}
+
+/* Estilos para los "cards" (ejemplo: preparación) */
+section[aria-labelledby="preparation-time"] {
+  background-color: #FCEFEF; /* Fondo suave rosado */
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #F3E5E5;
+}
+
+section[aria-labelledby="preparation-time"] ul {
+  list-style: none;
+  padding: 0;
+}
+
+section[aria-labelledby="preparation-time"] li {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
 }

@@ -57,6 +57,10 @@
     var(--font-family-serif);
   --text-preset-3: var(--font-weight-semibold) var(--font-size-medium)
     var(--font-family);
+  --text-preset-4: var(--font-weight-normal) var(--font-size-base)
+    var(--font-family);
+  --text-preset-5: var(--font-weight-normal) var(--font-size-small)
+    var(--font-family);
 
   /* Spacing scale */
   --spacing-1000: 7.75rem;
