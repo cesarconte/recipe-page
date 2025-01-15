@@ -3,9 +3,6 @@ body {
   font-family: var(--font-family);
   background-color: var(--background);
   color: var(--text-tertiary);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   line-height: var(--line-height-base);
 }
 
@@ -35,10 +32,6 @@ li::marker {
   color: var(--text-quaternary);
 }
 
-.recipe__preparation-time-content > li::marker {
-  color: var(--text-secondary);
-}
-
 /* Typography */
 strong {
   font: var(--text-preset-4);
@@ -50,7 +43,7 @@ strong {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-600);
-  width: min(100%, 46rem);
+  inline-size: min(100%, 46rem);
   background-color: var(--color-white);
   border-radius: clamp(0rem, -0.5282rem + 2.2535vw, 1.5rem);
   box-shadow: var(--shadow);
@@ -105,6 +98,10 @@ strong {
 .recipe__preparation-time-title {
   font: var(--text-preset-3);
   color: var(--text-quaternary);
+}
+
+.recipe__preparation-time-content > li::marker {
+  color: var(--text-secondary);
 }
 
 /* Recipe sections */
